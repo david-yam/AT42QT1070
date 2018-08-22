@@ -28,7 +28,7 @@ class AT42QT1070
 public: // some public definitions first
 	typedef enum
 	{
-		CHIPID = 0, //!< should be 0x2E
+		ATCHIPID = 0, //!< should be 0x2E
 		FIRMWARE= 1,  //!< could be 0x15 ;)
 		DETECTIONSTATUS=2, //!<Bit7=calibrate, Bit6=Overflow, Bit0=Touch
 		KEYSTATUS=3, //!< Bit=Key
