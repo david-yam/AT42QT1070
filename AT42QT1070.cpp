@@ -23,8 +23,8 @@ void AT42QT_CHANGEISR()
 void AT42QT1070::setInternalISR(uint8_t pin)
 {
   pinMode(pin, INPUT);
-  digitalWrite(pin, HIGH); // pull high, CHANGE is open drain
-  attachInterrupt(pin-2,AT42QT_CHANGEISR,FALLING); // on active falls low
+  //digitalWrite(pin, HIGH); // pull high, CHANGE is open drain
+  attachInterrupt(pin,AT42QT_CHANGEISR,FALLING); // on active falls low
 }
 
 void AT42QT1070::setErrorCallback(void (*cb)(uint8_t))
