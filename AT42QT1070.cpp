@@ -15,7 +15,7 @@ AT42QT1070::AT42QT1070()
 }
 
 // callback function for interrupt, replicate if you want another behaviour on interrupt, see test
-void AT42QT_CHANGEISR()
+ICACHE_RAM_ATTR void AT42QT_CHANGEISR()
 {
 	AT42QT1070::mySingleSelf->AT42QTchangeEvent++;	
 }
@@ -124,9 +124,7 @@ uint8_t AT42QT1070::changedDiffSet(int8_t *delta)
 
 
 uint8_t AT42QT1070::saveReferenceSet()
-{
-	uint16_t currentVal[AT42QT1070_MAXKEYS];
-	
+{	
 	if (!setActiveAddress(KEYSIGNAL))
 		return 0;
 
